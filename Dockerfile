@@ -16,4 +16,5 @@ ENV PHP_VERSION=7.4 \
     NAME=php
 
 RUN wget https://www.php.net/distributions/php-7.4.25.tar.gz
-    
+RUN tar -xvzf php-7.4.25.tar.gz
+RUN rm php-7.4.25.tar.gz
