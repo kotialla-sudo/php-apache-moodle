@@ -18,3 +18,9 @@ ENV PHP_VERSION=7.4 \
 RUN wget https://www.php.net/distributions/php-7.4.25.tar.gz
 RUN tar -xvzf php-7.4.25.tar.gz
 RUN rm php-7.4.25.tar.gz
+
+#install some base extensions
+RUN apt-get install -y \
+        libzip-dev \
+        zip \
+  && docker-php-ext-install zip
